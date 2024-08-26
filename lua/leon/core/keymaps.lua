@@ -11,6 +11,13 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<Tab>", ":tabn<CR>", { desc = "Next Tab" })
+keymap.set("n", "<S-Tab>", ":tabp<CR>", { desc = "Previous Tab" })
+keymap.set("n", "<leader>tx", ":tabc<CR>", { desc = "Close Tab" })
+vim.keymap.set("n", "gt", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", {})
+
+
+
 
 -- delete single character without copying into register
 -- keymap.set("n", "x", '"_x')
